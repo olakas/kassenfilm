@@ -1,0 +1,213 @@
+/*Makes the downloaded font usable*/
+@font-face {
+  font-family: bebas;
+  src: url("bebasneue.otf");
+}
+
+body {
+  padding: 1vw;
+  font: 30px bebas, sans-serif;
+    background-image: linear-gradient(#D33F49, #D7C0D0, #EFF0D1, #77BA99);
+}
+
+header {
+  top: 80px;
+  padding-bottom: 3vw;
+}
+
+h1 a {
+  text-decoration: none;
+  color: aliceblue;
+  font-weight: bold;
+}
+/*******
+*Navbar*
+*******/
+h1, nav {
+  text-align: center;
+}
+
+H4 {
+    font-family: = georgia,garamond serif;
+    font-size:20px;
+    font-style:italic;
+}
+
+ul {
+  list-style: none;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  color: aliceblue;
+}
+
+nav ul li{
+  float: left;
+}
+
+ul li ul {
+  padding: 5px;
+  text-align: left;
+  position: fixed;
+  display: none;
+  z-index: 1;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+ul li ul li{
+  float: none;
+    color: aliceblue;
+
+}
+
+ul li:hover ul {
+  display: block;
+  background-color: black;
+}
+
+ul li{
+    padding: 0;
+    margin: 0;
+    color: aliceblue;
+}
+
+ul li a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.active, ul li a:hover {
+  color: aliceblue;
+}
+
+/*****
+*Grid*
+*****/
+.grid-container {
+  /*position: relative;*/
+  top: 100px;
+  display: grid;
+  grid-gap: 10px 10px;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+
+@media screen and (min-width: 576px) and (max-width: 1200px) {
+    .grid-container{
+        grid-template-columns: auto auto;
+    }
+
+    body{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .grid-container{
+        grid-template-columns: auto;
+    }
+
+    body{
+        font-size: 20px;
+    }
+}
+
+.grid-item {
+    position: relative;
+    background-color: #9198a3;
+    background-size: cover;
+    padding: 0;
+    text-align: center;
+    height: 200px;
+    cursor: pointer;
+}
+
+.overlay {
+    position: absolute;
+  height: 100%;
+  width: 100%;
+  transition: .5s ease;
+  background: rgba(0, 0, 0, 0);
+  color: aliceblue;
+    z-index: 10;
+}
+
+.overlay-text {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.grid-item:hover .overlay {
+  background: rgba(0, 0, 0, 0.8);
+  color: rgba(255, 255, 255, 1);
+}
+
+.overlay-img{
+    position:absolute;
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 100%;
+    left: 0;
+    z-index: 0;
+}
+
+/******
+*Video*
+******/
+.img-container{
+    height: 0;
+    width: 100%;
+    padding-bottom: 56.25%;
+    position: relative;
+    text-align: left;
+}
+
+.img-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.video{
+    text-align: center;
+    color: aliceblue;
+}
+/******
+*About*
+******/
+.about {
+  text-align: center;
+}
+
+#headshot {
+  display: block;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1em;
+}
+
+/*******
+*Footer*
+*******/
+.footer{
+  text-align: center;
+  padding-top: 2em;
+}
+
+.fa {
+    padding: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    background-color: #000;
+    color: white;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
